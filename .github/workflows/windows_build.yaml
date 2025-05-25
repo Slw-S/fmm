@@ -31,9 +31,9 @@ jobs:
           python -m build
           pip install .
           pip list
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
-          name: windows-artifacts
+          name: windows-arm-artifacts
           path: dist/*
       - name: Run skfmm tests
         run: |
