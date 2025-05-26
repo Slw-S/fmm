@@ -51,7 +51,7 @@ jobs:
           CIBW_CONFIG_SETTINGS_WINDOWS: "setup-args=--vsenv"
           CIBW_ENVIRONMENT_MACOS:
             MACOSX_DEPLOYMENT_TARGET=${{ matrix.macos_deployment_target }}
-          CIBW_TEST_REQUIRES: numpy
+          CIBW_TEST_REQUIRES: numpy==2.3.0rc1
           CIBW_TEST_COMMAND: |
            python -c "import skfmm, sys; sys.exit(skfmm.test())"
           
