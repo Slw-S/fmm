@@ -1,4 +1,4 @@
-name: Windows Build
+name: Windows ARM Build
 
 on: 
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
           pip list
       - uses: actions/upload-artifact@v4
         with:
-          name: windows-arm-artifacts
+          name: windows-arm-cp-${{ matrix.python-version }}-wheel
           path: dist/*
       - name: Run skfmm tests
         run: |
